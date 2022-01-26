@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    background-color: rgb(131, 102, 126);
+}
+
+header,h1{
+    background-color: black; 
+}
+
+h1{
+   margin-left: 20%;
+   position: relative;
+   font-size: 14vw;
+   color: #252839;
+   -webkit-text-stroke: 0.3vw rgb(87, 82, 87);
+   text-transform: uppercase;
+}
+
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2;
+    height: 100%;
+    color: rgb(59, 5, 57);
+    -webkit-text-stroke: 0vw rgb(58, 3, 58);
+    border-right: 2px solid rgb(233, 73, 153);
+    overflow: hidden;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+
+#clockbox{
+    width: 250px;
+    height: 80px;
+    margin-top: 100px;
+    margin-left: 38%;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 7px 1px white;
+   
+}
+
+.clock{
+    display: inline-block;
+    color: white;
+    background-color: black;
+    padding-right: 15px;
+    margin-left: 17px;
+    font-size: 19px;
+}
+
+#hour {
+    background-color: black;
+}
+
+#minute{
+    background-color: black;
+}
+
+#second{
+    background-color: black;
+}
+
+.clock #hour,#minu,#second{
+    padding-top: 32px;
+
+}
